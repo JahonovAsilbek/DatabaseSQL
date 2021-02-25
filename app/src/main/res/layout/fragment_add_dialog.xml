@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:context=".dialogs.AddDialog">
+
+    <TextView
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:text="Bootcamp news qo'shish"
+        android:textColor="@android:color/black"
+        android:textSize="16sp" />
+
+    <EditText
+        android:background="@drawable/edittext_bg"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray"
+        android:id="@+id/add_bootcamp_title"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:hint="Sarlavha"
+        android:paddingStart="15dp" />
+
+    <EditText
+        android:background="@drawable/edittext_bg"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/darker_gray"
+        android:id="@+id/add_bootcamp_text"
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:hint="Matni"
+        android:paddingStart="15dp" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:background="@drawable/edittext_bg"
+        android:id="@+id/add_bootcamp_spinner"
+        android:paddingStart="15dp"
+
+        android:layout_marginTop="10dp"
+        android:layout_width="280dp"
+        android:layout_height="50dp" />
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:gravity="end"
+        android:orientation="horizontal"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/cancel"
+            android:textSize="16sp"
+            android:clickable="true"
+            android:textColor="#221FCE"
+            android:layout_marginEnd="15dp"
+            android:text="Bekor qilish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/save"
+            android:textSize="16sp"
+            android:clickable="true"
+            android:textColor="#221FCE"
+            android:text="Saqlash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</LinearLayout>

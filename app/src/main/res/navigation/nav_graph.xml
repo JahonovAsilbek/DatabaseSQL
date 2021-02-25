@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="uz.revolution.databasebootcampnews.fragments.MainFragment"
+        android:label="BOOTCAMP NEWS"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_itemFragment"
+            app:destination="@id/itemFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_addDialog"
+            app:destination="@id/addDialog" />
+    </fragment>
+    <fragment
+        android:id="@+id/itemFragment"
+        android:name="uz.revolution.databasebootcampnews.fragments.ItemFragment"
+        android:label="fragment_item"
+        tools:layout="@layout/fragment_item" >
+        <action
+            android:id="@+id/action_itemFragment_to_editDialog"
+            app:destination="@id/editDialog" />
+        <action
+            android:id="@+id/action_itemFragment_to_itemBootcamp"
+            app:destination="@id/itemBootcamp" />
+    </fragment>
+    <dialog
+        android:id="@+id/addDialog"
+        android:name="uz.revolution.databasebootcampnews.dialogs.AddDialog"
+        android:label="fragment_edit_dialog"
+        tools:layout="@layout/fragment_edit_dialog" />
+    <dialog
+        android:id="@+id/editDialog"
+        android:name="uz.revolution.databasebootcampnews.dialogs.EditDialog"
+        android:label="EditDialog" />
+    <fragment
+        android:id="@+id/itemBootcamp"
+        android:name="uz.revolution.databasebootcampnews.fragments.ItemBootcamp"
+        android:label="Bootcamp news"
+        tools:layout="@layout/fragment_item_bootcamp" />
+</navigation>
