@@ -2,8 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="10dp">
+    android:orientation="vertical">
 
     <TextView
         android:id="@+id/title_tv"
@@ -11,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="ASOSIY"
-        android:textColor="#000"
+        android:textColor="#FFF"
         android:textSize="18sp" />
 
 

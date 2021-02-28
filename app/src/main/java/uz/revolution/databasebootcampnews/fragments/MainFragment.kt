@@ -123,30 +123,7 @@ class MainFragment : Fragment() {
                 1 -> tabView.title_tv.text = "Dunyo"
                 2 -> tabView.title_tv.text = "Ijtimoiy"
             }
-
-            if (i == 0) {
-                tabView?.title_tv?.setTextColor(resources.getColor(R.color.white))
-            } else {
-                tabView?.title_tv?.setTextColor(resources.getColor(R.color.black))
-            }
         }
-
-        root.tab_layout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
-            @SuppressLint("ResourceAsColor")
-            override fun onTabSelected(tab: TabLayout.Tab?) {
-                val customView = tab?.customView
-                customView?.title_tv?.setTextColor(resources.getColor(R.color.white))
-            }
-
-            override fun onTabUnselected(tab: TabLayout.Tab?) {
-                val customView = tab?.customView
-                customView?.title_tv?.setTextColor(resources.getColor(R.color.black))
-            }
-
-            override fun onTabReselected(tab: TabLayout.Tab?) {
-
-            }
-        })
     }
 
 }
