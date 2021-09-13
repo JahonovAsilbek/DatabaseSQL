@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.view.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import com.google.android.material.tabs.TabLayout
+import androidx.viewpager.widget.ViewPager
 import kotlinx.android.synthetic.main.fragment_main.view.*
 import kotlinx.android.synthetic.main.tab_item.view.*
 import uz.revolution.databasebootcampnews.R
@@ -44,16 +44,36 @@ class MainFragment : Fragment() {
     private var category: ArrayList<Category>? = null
     lateinit var root: View
     private var viewPagerAdapter: ViewPagerAdapter? = null
+    private var pagerPosition = 0
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         root = inflater.inflate(R.layout.fragment_main, container, false)
         (activity as AppCompatActivity).setSupportActionBar(root.toolbar)
         loadData()
         loadAdapters()
         setTabs()
+
+        root.received_vp.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
+            override fun onPageScrolled(
+                position: Int,
+                positionOffset: Float,
+                positionOffsetPixels: Int
+            ) {
+                pagerPosition = position
+            }
+
+            override fun onPageSelected(position: Int) {
+
+            }
+
+            override fun onPageScrollStateChanged(state: Int) {
+
+            }
+
+        })
 
         return root
     }
@@ -96,19 +116,13 @@ class MainFragment : Fragment() {
                         loadData()
                         loadAdapters()
                         setTabs()
+                        root.received_vp.currentItem = pagerPosition
                     }
                 })
             }
         }
         return super.onOptionsItemSelected(item)
     }
-
-//    override fun onResume() {
-//        super.onResume()
-//        loadData()
-//        loadAdapters()
-//        setTabs()
-//    }
 
     @SuppressLint("SetTextI18n")
     private fun setTabs() {

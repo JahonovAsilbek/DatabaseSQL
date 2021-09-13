@@ -63,8 +63,8 @@ class EditDialog : DialogFragment() {
 
     private fun onSaveClick() {
         root.save.setOnClickListener {
-            val title=root.edit_bootcamp_title.text.toString()
-            val text=root.edit_bootcamp_text.text.toString()
+            val title=root.edit_bootcamp_title.text.toString().trim()
+            val text=root.edit_bootcamp_text.text.toString().trim()
             val categoryID=param2!![root.edit_bootcamp_spinner.selectedItemPosition].id
 
             if (title.isNotEmpty() && text.isNotEmpty()) {

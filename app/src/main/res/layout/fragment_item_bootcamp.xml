@@ -40,20 +40,21 @@
                     android:gravity="center"
                     android:text="Android Bootcamp 25-noyabrda start oldi"
                     android:textColor="@android:color/black"
-                    android:textSize="18sp" />
+                    android:textSize="22sp" />
 
                 <TextView
                     android:id="@+id/text_item"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
+                    android:padding="5dp"
                     android:layout_marginTop="20dp"
                     android:layout_marginEnd="20dp"
                     android:text="Pdp o’quv markazida birinchi marta ochildi. Bunaqasi tarixda
 birinchi marta. Bootcampni bitirgan talabalar ajoyib natija
 ko’rsatishidan umdvormiz....."
                     android:textColor="@android:color/black"
-                    android:textSize="14sp" />
+                    android:textSize="18sp" />
 
             </LinearLayout>
 

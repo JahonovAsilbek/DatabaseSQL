@@ -33,9 +33,11 @@
         android:textColorHint="@android:color/darker_gray"
         android:id="@+id/add_bootcamp_text"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:gravity="start|top"
+        android:layout_height="150dp"
         android:layout_marginTop="10dp"
         android:hint="Matni"
+        android:paddingTop="5dp"
         android:paddingStart="15dp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout

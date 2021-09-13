@@ -35,7 +35,7 @@ class AddDialog : DialogFragment() {
 
     lateinit var root: View
     private var onSaveClick: OnSaveClick? = null
-    private var spinnerAdapter:SpinnerAdapter?=null
+    private var spinnerAdapter: SpinnerAdapter? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -51,8 +51,8 @@ class AddDialog : DialogFragment() {
     }
 
     private fun setSpinner() {
-        spinnerAdapter=SpinnerAdapter(param1!!)
-        root.add_bootcamp_spinner.adapter=spinnerAdapter
+        spinnerAdapter = SpinnerAdapter(param1!!)
+        root.add_bootcamp_spinner.adapter = spinnerAdapter
     }
 
     private fun onCancelClick() {
@@ -63,9 +63,9 @@ class AddDialog : DialogFragment() {
 
     private fun onSaveClick() {
         root.save.setOnClickListener {
-            val title = root.add_bootcamp_title.text.toString()
-            val text = root.add_bootcamp_text.text.toString()
-            val categoryID=param1!![root.add_bootcamp_spinner.selectedItemPosition].id
+            val title = root.add_bootcamp_title.text.toString().trim()
+            val text = root.add_bootcamp_text.text.toString().trim()
+            val categoryID = param1!![root.add_bootcamp_spinner.selectedItemPosition].id
 
             Log.d("AAAA", "onSaveClick: $categoryID")
 

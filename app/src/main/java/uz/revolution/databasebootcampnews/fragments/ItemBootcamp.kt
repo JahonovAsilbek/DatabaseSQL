@@ -41,7 +41,7 @@ class ItemBootcamp : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         root = FragmentItemBootcampBinding.inflate(layoutInflater).root
         (activity as AppCompatActivity).setSupportActionBar(root.toolbar_item)
         (activity as AppCompatActivity).supportActionBar.apply {
